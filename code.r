@@ -5,12 +5,12 @@
 
 # Project Name: 2 sample t-test
 
-# Data source: 
+# Data source: Sample data from a website test
 
 ############################################################################################
 
 # begin by setting the working directory for the files
-setwd("C:/Users/cdobbe/Documents/R")
+setwd("C:/Users/******/Documents/R")
 
 #Load the packages and libraries, or d/l any using install.packages("???")
 library(dplyr)
@@ -28,7 +28,7 @@ library(gridExtra)
 
 #data1 <- file.choose() # Allows for manual selection from folder location, paired with below
 #data <- read_csv(data1)  
-data1 <- read_csv("saks_webtest.csv") #loads in the CSV to a tibble, easier to work with
+data1 <- read_csv("web_data.csv") #loads in the CSV to a tibble, easier to work with
 #data1 <- read.csv("file_name.tsv", sep = "\t", header = TRUE)
 #data1 <- read.xls("file_name.xlsx")
 #data1 <- XLGetRange(sheet = "sheet1", range = "A1:B21", header = TRUE) #only used when Excel workbook is open
@@ -109,7 +109,7 @@ ggp <- ggplot(data = data1, mapping = aes(x=group, y=diff)) +
 
 print(ggp)
 
-#If the red line is parallel, then the means of each group are equal#
+#If the red line is parallel, then the means of each group are equal (or close to)#
 
 #Now we can check the normality of the group changes
 
